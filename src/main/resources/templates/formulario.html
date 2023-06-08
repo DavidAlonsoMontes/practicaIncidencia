@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+</head>
+<body>
+<h1>Modificar una incidencia</h1>
+<form action="/incidencias/modificar/guardar" method="post">
+
+  <input th:field="${incidencia.id}" type="hidden" id="incidenciaId" name="incidenciaId" ><br><br>
+
+  <label for="usuario">Usuario:</label>
+  <input th:field="${incidencia.usuario}" type="text" id="usuario" name="usuario"><br><br>
+
+  <label for="fecha">Fecha:</label>
+  <input th:field="${incidencia.fecha}" type="text" id="fecha" name="fecha"><br><br>
+
+  <label for="prioridad">Prioridad:</label>
+  <select id="prioridad" name="prioridad">
+    <option value="1" th:selected="${incidencia.prioridad == 1}">1</option>
+    <option value="2" th:selected="${incidencia.prioridad == 2}">2</option>
+    <option value="3" th:selected="${incidencia.prioridad == 3}">3</option>
+    <option value="4" th:selected="${incidencia.prioridad == 4}">4</option>
+    <option value="5" th:selected="${incidencia.prioridad == 5}">5</option>
+    <option value="6" th:selected="${incidencia.prioridad == 6}">6</option>
+
+    <option value="7" th:selected="${incidencia.prioridad == 7}">7</option>
+    <option value="8" th:selected="${incidencia.prioridad == 8}">8</option>
+    <option value="9" th:selected="${incidencia.prioridad == 9}">9</option>
+    <option value="10" th:selected="${incidencia.prioridad == 10}">10</option>
+  </select><br><br>
+
+  <input type="submit" value="Modificar la Incidencia" class="button">
+</form>
+
+</body>
+</html>
